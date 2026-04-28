@@ -21,20 +21,20 @@
             <table class="table glass-table mb-0">
                 <thead>
                     <tr>
-                        <th scope="col" class="text-center">S.NO</th>
-                        <th scope="col">👤 Name</th>
-                        <th scope="col">🎓 Roll</th>
-                        <th scope="col">📍 City</th>
-                        <th scope="col">📧 Email</th>
-                        <th scope="col">📱 Phone</th>
-                        <th scope="col" class="text-center">⚡ Actions</th>
+                        <th scope="col" class="text-center" style="color: #000000;">S.NO</th>
+                        <th scope="col" style="color: #000000;">👤 Name</th>
+                        <th scope="col"style="color: #000000;">🎓 Roll</th>
+                        <th scope="col"style="color: #000000;">📍 City</th>
+                        <th scope="col"style="color: #000000;">📧 Email</th>
+                        <th scope="col"style="color: #000000;">📱 Phone</th>
+                        <th scope="col" class="text-center" style="color: #000000;">⚡ Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for stud in studata %}
                     <tr>
                         <td class="text-center">
-                            <span class="sno-badge">{{forloop.counter}}</span>
+                            <span class="sno-badge" style="color: #000000;">{{forloop.counter}}</span>
                         </td>
                         <td>
                             <div class="d-flex align-items-center gap-2" style="color: #000000;">
@@ -47,7 +47,7 @@
                         <td style="color: #000000;">{{stud.email}}</td>
                         <td style="color: #000000;">{{stud.phone_number}}</td>
                         <td class="text-center">
-                            <div class="action-buttons justify-content-center">
+                            <div class="action-buttons justify-content-center" >
                                 <form action="{% url 'delete_student' %}" method="POST" style="display:inline;">
                                     {% csrf_token %}
                                     <input type="hidden" name="id" value="{{ stud.id }}">
